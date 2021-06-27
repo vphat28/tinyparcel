@@ -16,3 +16,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('parcels/{id}', 'ParcelController@get');
+$router->post('parcels/', 'ParcelController@post');
+$router->put('parcels/{id}', 'ParcelController@put');
+$router->delete('parcels/{id}', 'ParcelController@delete');
+$router->get('prices/', 'PriceController@getPrices');
