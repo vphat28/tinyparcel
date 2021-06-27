@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 class ParcelController extends Controller
 {
     /**
+     * @return array
+     */
+    public function getAll() {
+        $parcels = Parcel::all();
+
+        return $parcels;
+    }
+
+    /**
      * @param $id
      *
      * @return array

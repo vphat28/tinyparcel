@@ -18,6 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('parcels/{id}', 'ParcelController@get');
+$router->get('parcels/', 'ParcelController@getAll');
 $router->post('parcels/', 'ParcelController@post');
 $router->put('parcels/{id}', 'ParcelController@put');
 $router->delete('parcels/{id}', 'ParcelController@delete');
