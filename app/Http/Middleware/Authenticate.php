@@ -35,7 +35,9 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if ($this->auth->guard($guard)->guest()) {
+        $header = $request->header('Authorization');
+
+        if ($header != 'Bearer somethinggood') {
             return response('Unauthorized.', 401);
         }
 

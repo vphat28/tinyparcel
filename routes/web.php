@@ -17,9 +17,13 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('parcels/{id}', 'ParcelController@get');
-$router->get('parcels/', 'ParcelController@getAll');
-$router->post('parcels/', 'ParcelController@post');
-$router->put('parcels/{id}', 'ParcelController@put');
-$router->delete('parcels/{id}', 'ParcelController@delete');
-$router->get('prices/', 'PriceController@getPrices');
+
+
+$router->group(['middleware' => 'auth'], function () use ($router) {
+    $router->get('parcels/{id}', 'ParcelController@get');
+    $router->get('parcels/', 'ParcelController@getAll');
+    $router->post('parcels/', 'ParcelController@post');
+    $router->put('parcels/{id}', 'ParcelController@put');
+    $router->delete('parcels/{id}', 'ParcelController@delete');
+    $router->get('prices/', 'PriceController@getPrices');
+});
