@@ -12,7 +12,7 @@ class PriceController extends Controller
      * @return array
      */
     public function getPrices(Request $request) {
-        $ids = $request->get('ids');
+        $ids = $request->get('parcelIds');
 
         return $ids;
     }

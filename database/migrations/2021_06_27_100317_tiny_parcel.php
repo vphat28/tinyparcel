@@ -10,8 +10,14 @@ return new class extends Migration
     {
         Schema::create('parcels', function (Blueprint $table) {
             $table->id();
-            $table->json('items');
-            $table->timestamps();
+            $table->string('item_name');
+            $table->float('weight');
+            $table->float('volume', 8, 5);
+            $table->float('declared_value');
+            $table->string('chosen_model', 10);
+            $table->float('quote');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
