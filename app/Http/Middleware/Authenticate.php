@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\Factory as Auth;
 
 class Authenticate
 {
+    const BEARER_TOKEN = 'Bearer somethinggood';
     /**
      * The authentication guard factory instance.
      *
@@ -37,7 +38,7 @@ class Authenticate
     {
         $header = $request->header('Authorization');
 
-        if ($header != 'Bearer somethinggood') {
+        if ($header != self::BEARER_TOKEN) {
             return response('Unauthorized.', 401);
         }
 
