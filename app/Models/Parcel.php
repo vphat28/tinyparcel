@@ -59,7 +59,7 @@ class Parcel extends Model {
 
         $valueQuote = $valuePrice * $this->getAttribute('declared_value');
 
-        if ($volumeQuote > $quote) {
+        if ($valueQuote > $quote) {
             $quote = $valueQuote;
             $chosenModel = self::QUOTE_BY_VALUE;
         }
