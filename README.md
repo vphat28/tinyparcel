@@ -1,16 +1,19 @@
 #Installation
+
 The server/api part can be run with builtin PHP server using
 ```
 php -S 0.0.0.0:8000 -t public
 ```
 
 #Testing
+
 The phpunit.xml is provided and unit tests can be run from the root folder by simply 
 ```
 phpunit
 ```
 
 #Authentication
+
 The hardcoded bearer token is `somethinggood`. This is a sample request using postman
 ```
 curl --location --request POST 'http://51.79.158.147:8000/parcels' \
