@@ -4,6 +4,7 @@ The server/api part can be run with builtin PHP server using
 ```
 php -S 0.0.0.0:8000 -t public
 ```
+Copy the .env.sample file to .env and edit your mysql connection
 
 #Testing
 
