@@ -10,6 +10,9 @@
         </testsuite>
     </testsuites>
     <php>
+        <env name="PRICE_PER_KG" value="5"/>
+        <env name="PRICE_PER_CUBIC_METRE" value="1000"/>
+        <env name="PRICE_PERCENT_OF_VALUE" value="0.03"/>
         <env name="APP_ENV" value="testing"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
