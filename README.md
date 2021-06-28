@@ -1,4 +1,4 @@
-#Installation
+##Installation
 
 The server/api part can be run with builtin PHP server using
 ```
